@@ -1,0 +1,23 @@
+.tasks-header{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: white;
+    margin-top: 3rem;
+}
+
+hr{
+    width: 80%;
+    float: left;
+    border: solid #A5A5A5 1px;
+    margin-top: 2rem;
+}
+
+.clear-btn{
+    background-color: #363636;
+    border: solid transparent 0px;
+    border-radius: 5px;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    padding: 6px;
+}
