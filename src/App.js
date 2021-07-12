@@ -22,7 +22,7 @@ function App() {
       <h1>Today's Tasks</h1>
       <div className="content">
         <AddTodo todos={ todos } setTodos={ setTodos } />
-        <TodoList todos={ todos } setTodos={ setTodos } completedTodos={ completedTodos } setCompletedTodos={ setCompletedTodos } />
+        <TodoList todos={ todos } setTodos={ setTodos } setCompletedTodos={ setCompletedTodos } completedTodos={ completedTodos } />
       </div>
     </div>
   );

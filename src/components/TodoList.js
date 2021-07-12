@@ -14,7 +14,8 @@ function TodoList({ todos, setTodos, completedTodos, setCompletedTodos }) {
             <hr></hr>
             <div className="completed-todos">
                 <h2 className="tasks-header">Completed Tasks</h2>
-                { completedTodos.map(completedTodo => <Todo key={ completedTodo.id } todo={ completedTodo } todos={ completedTodos } setTodo={ setCompletedTodos } />) }
+                { completedTodos.map(todo => <Todo key={ todo.id } todo={ todo } todos={ todos } setTodos={ setTodos } setCompletedTodos={ setCompletedTodos } />) }
+                <button onClick={ () => setCompletedTodos([]) } className="clear-btn">Clear Completed Todos</button>
             </div>
         </div>
     )

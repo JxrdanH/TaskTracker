@@ -8,7 +8,7 @@ function AddTodo({ todos, setTodos }) {
     function todoSubmit(e){
         const name = textInputRef.current.value;
         if (name !== ''){
-            setTodos(prevTodos => { return [...prevTodos, { id: uuidv4(), name: name, complete: false }] });
+            setTodos(prevTodos => { return [{ id: uuidv4(), name: name, complete: false }, ...prevTodos] });
             e.preventDefault();
             textInputRef.current.value = null;
         }

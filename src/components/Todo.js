@@ -2,7 +2,8 @@ import React from 'react';
 import '../styles/Todo.css';
 import TrashIcon from '../Images/trash.ico';
 
-function Todo({ todo, todos, setTodos }){
+function Todo({ todo, todos, setTodos, setCompletedTodos }){
+
     function remove(id) {
         const newTodos = todos.filter(todo => todo.id !== id);
         setTodos(newTodos);
@@ -10,10 +11,12 @@ function Todo({ todo, todos, setTodos }){
 
     function handleChange(id){
         const newTodos = [...todos];
-        const todo = newTodos.find(todo => todo.id === id);
-        //todo.complete = !todo.complete;
-        //setCompletedTodos(newTodos)
-    }
+        const todo = newTodos.filter(todo => todo.id === id);
+        todo.complete = !todo.complete;
+        setTodos(newTodos.filter(todo => todo.complete === false))
+        setCompletedTodos(newTodos.filter(todo => todo.complete === true))
+
+    };
 
     return (
         <div className="Todo">
